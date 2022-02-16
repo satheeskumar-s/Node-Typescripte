@@ -30,7 +30,7 @@ class AuthRoute {
       await this.userAuthentication.isAuthenticated(req, res, next);
     });
 
-    // Job title middleware to check user authorization
+    // Middleware to check user authorization
     router.use(async (req: Request, res: Response, next: NextFunction) => {
       await this.userAuthorization.isAuthorized(req, res, next);
     });
