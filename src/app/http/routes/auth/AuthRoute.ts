@@ -1,7 +1,7 @@
-import express, {Application, Request, Response, NextFunction} from 'express';
-import {AuthController} from "../../controllers/AuthController";
-import {UserAuthentication} from "../../middleware/auth/UserAuthentication";
-import {UserAuthorization} from "../../middleware/auth/UserAuthorization";
+import express, { Application, Request, Response, NextFunction } from 'express';
+import { AuthController } from '../../controllers/AuthController';
+import { UserAuthentication } from '../../middleware/auth/UserAuthentication';
+import { UserAuthorization } from '../../middleware/auth/UserAuthorization';
 
 class AuthRoute {
   public app: Application;
@@ -21,7 +21,7 @@ class AuthRoute {
     const router = express.Router();
 
     // public Route
-    router.get("/public", async (req: Request, res: Response, next: NextFunction) => {
+    router.get('/public', async (req: Request, res: Response, next: NextFunction) => {
       await this.authController.list(req, res, next);
     });
 
@@ -36,11 +36,11 @@ class AuthRoute {
     });
 
     // Private Route
-    router.get("/private", async (req: Request, res: Response, next: NextFunction) => {
+    router.get('/private', async (req: Request, res: Response, next: NextFunction) => {
       await this.authController.list(req, res, next);
     });
 
-    this.app.use("", [router]);
+    this.app.use('', [router]);
   }
 }
 

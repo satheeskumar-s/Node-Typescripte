@@ -1,7 +1,8 @@
 export class UserService {
-  constructor() {}
+  // constructor() {}
 
-  async list(): Promise<string> {
-    return 'This is the message from user service';
+  async list(): Promise<Array<User>> {
+    const user = new User();
+    return [user];
   }
 }

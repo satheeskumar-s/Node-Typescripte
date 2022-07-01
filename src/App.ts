@@ -1,5 +1,5 @@
-import express, {Application, Request, Response} from 'express';
-import router from "./app/http/routes";
+import express, { Application, Request, Response } from 'express';
+import router from './app/http/routes';
 
 class App {
   public app: Application;
@@ -16,9 +16,8 @@ class App {
 
   private mountApiRoute(): void {
     this.app.get('/', (req: Request, res: Response) => {
-        res.status(200).send({Success: true});
-      }
-    );
+      res.status(200).send({ Success: true });
+    });
     this.app.use('/api/', router);
   }
 }

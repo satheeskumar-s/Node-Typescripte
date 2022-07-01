@@ -1,0 +1,19 @@
+# Run following command for docker compose build
+# docker-compose --verbose build
+
+# Run following command for docker compose up
+# docker-compose up
+
+version: '3.8'
+
+services:
+  node-typescript:
+    container_name: node-typescript
+    tty: true
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/api
+    ports:
+      - '3001:3001'

@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 
 export class UserAuthentication {
-  constructor() {}
+  // constructor() {}
 
   async isAuthenticated(req: Request, res: Response, next: NextFunction) {
     try {
