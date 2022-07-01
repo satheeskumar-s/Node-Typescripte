@@ -1,3 +1,5 @@
+import { User } from '../Models/User';
+
 export class UserService {
   // constructor() {}
 

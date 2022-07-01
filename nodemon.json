@@ -1,0 +1,9 @@
+{
+  "ignore": [
+    "**/docker/**",
+    "**/public/**",
+    "**/sample.json",
+    "**/sample.js",
+    "**/*.log"
+  ]
+}
